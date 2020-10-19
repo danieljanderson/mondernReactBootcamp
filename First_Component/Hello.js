@@ -1,6 +1,6 @@
 class Hello extends React.Component {
   render() {
-
-    return <p>Hi {this.props.to} from {this.props.from}</p>;
+   const bangs = "!".repeat(this.props.bangs)
+    return <p>Hi {this.props.to} from {this.props.from}{bangs}</p>;
   }
 }
