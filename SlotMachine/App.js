@@ -3,19 +3,19 @@ class App extends React.Component {
       return (
         <div>
         <Machine
-          s1="x"
-          s2="y"
-          s3="x"
+          s1="🍎"
+          s2="🍊"
+          s3="🍎"
         ></Machine>
         <Machine
-          s1="x"
-          s2="x"
-          s3="x">
+          s1="🍎"
+          s2="🍎"
+          s3="🍎">
         </Machine>
         <Machine
-          s1="y"
-          s2="z"
-          s3="x">
+          s1="🍊"
+          s2="🍐"
+          s3="🍎">
         </Machine>
         </div>
       );
