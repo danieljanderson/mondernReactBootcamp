@@ -1,11 +1,15 @@
 class Machine extends React.Component {
     render() {
-   if((this.props.s1===this.props.s2)&&this.props.s1===this.props.s3){
-    return <p>You Win!!! {this.props.s1} {this.props.s2} {this.props.s3}</p>;
-   }
-   else{
-       return <p>You lose {this.props.s1} {this.props.s2} {this.props.s3}</p>
-   }
-    }
+    const {s1,s2,s3} = this.props
+    const winner = (s1===s2)&&(s2===s3)
+   return(
+       <div className="Machine">
+           <p style={{fontSize: '50px',backgroundColor: 'purple'}}>
+               {s1} {s2} {s3}
+           </p>
+           <p className={winner ? 'win':'lose'}>{winner ? 'Winner!' : 'Loser!'}</p>
+       </div>
+   )
   }
+}
   
