@@ -4,16 +4,19 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 
 import Todo from './Todo';
-function TodoList(props) {
+function TodoList({ todos, removeTodo, toggleTodo }) {
   return (
     <Paper>
       <List>
-        {props.todos.map((todo) => (
+        {todos.map((todo) => (
           <>
             <Todo
+              id={todo.id}
               task={todo.task}
               key={todo.id}
               completed={todo.completed}
+              removeTodo={removeTodo}
+              toggleTodo={toggleTodo}
             ></Todo>
             <Divider></Divider>
           </>
